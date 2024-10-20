@@ -1,0 +1,109 @@
+/* Base styles for the course card */
+.course-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Course image styles */
+.course-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Course title */
+.course-card h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin: 16px 0 8px 0;
+}
+
+/* Course details */
+.course-card p {
+    font-size: 1rem;
+    color: #0c0c0c;
+    margin: 8px 0;
+}
+
+/* Get Started button */
+.course-common-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 16px auto;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    width:auto;
+}
+
+.course-common-btn:hover {
+    background-color: #0056b3;
+}
+
+.course-common-btn:focus {
+    outline: none;
+}
+
+/* Responsive Design */
+
+/* For tablets and small screens */
+@media (max-width: 768px) {
+    .course-card {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .course-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .course-card p {
+        font-size: 0.9rem;
+    }
+
+    .course-common-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .course-card {
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    .course-image {
+        height: 150px;
+    }
+
+    .course-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .course-card p {
+        font-size: 0.8rem;
+    }
+
+    .course-common-btn {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+}

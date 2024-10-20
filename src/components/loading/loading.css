@@ -1,0 +1,30 @@
+/* Full page layout for the loading screen */
+.loading-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #080000; /* Light background color */
+    position: relative;
+    z-index: 10; /* Ensure it's above other content */
+}
+
+/* Loader styles */
+.loader {
+    border: 6px solid #060000; /* Light grey background */
+    border-top: 7px solid #fffffe; /* Blue top border for spinning effect */
+    border-radius: 80%;
+    width: 80px;  /* Width of loader */
+    height: 80px; /* Height of loader */
+    animation: spin 1.5s linear infinite; /* Spinning animation */
+}
+
+/* Keyframes for loader spin animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

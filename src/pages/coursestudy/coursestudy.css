@@ -1,0 +1,108 @@
+/* coursestudy.css */
+
+.Course-main-page {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    overflow: hidden; /* To ensure video background stays behind content */
+}
+
+.background-videocourse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire background */
+    z-index: -1; /* Keeps the video behind the content */
+    filter: brightness(0.6); /* Darkens the video for better text readability */
+}
+
+.course-study-page {
+    background-color: rgba(255, 255, 255, 0.35); /* Slight transparency for the content container */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    transition: transform 0.3s ease;
+    z-index: 1; /* Ensures the content is above the video */
+}
+
+.course-study-page img {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    max-width: 100%; /* Ensures the image is responsive */
+}
+
+.course-study-page h2 {
+    font-size: 2rem;
+    color: #080808;
+    margin-bottom: 10px;
+}
+
+.course-study-page h4 {
+    font-size: 1.2rem;
+    color: #090909;
+    margin-bottom: 10px;
+}
+
+.course-study-page h5 {
+    font-size: 1rem;
+    color: #0a0000;
+    margin-bottom: 10px;
+}
+
+.course-study-page a {
+    display: inline-block;
+    margin-top: 2px;
+    text-decoration: none;
+    color: white;
+    background-color: #699bd0;
+    padding: 1px 12px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-study-page a:hover {
+    background-color: #03264c;
+    transform: translateY(-3px); /* Adds a slight lift effect on hover */
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .course-study-page {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .course-study-page img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .course-study-page h2 {
+        font-size: 1.8rem;
+    }
+
+    .course-study-page h4 {
+        font-size: 1.1rem;
+    }
+
+    .course-study-page h5 {
+        font-size: 0.9rem;
+    }
+
+    .course-study-page a {
+        font-size: 1.2rem;
+    }
+}
+

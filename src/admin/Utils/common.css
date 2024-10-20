@@ -1,0 +1,133 @@
+/* General layout for the page */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    height: 100vh;
+  }
+  
+  /* Header styling */
+  .header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  /* Footer styling */
+  .footer {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Main content and sidebar container */
+  .main-content {
+    display: flex;
+    height: 100%;
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    width: 250px;
+    background-color: white;
+    padding-top: 20px;
+    transition: all 0.3s ease;
+    height: calc(100vh - 125px); /* Full height minus header and footer height */
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 20px 0;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: rgb(11, 11, 11);
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sidebar ul li a .icon {
+    margin-right: 15px;
+    font-size: 22px;
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+  }
+  
+  /* Main content area (beside the sidebar) */
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    overflow-y: auto;
+  }
+  
+  /* Hide the span (text) and reduce sidebar width for smaller screens */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 80px;
+    }
+  
+    .sidebar ul li a {
+      justify-content: center;
+      padding: 10px;
+    }
+  
+    .sidebar ul li a .icon {
+      margin-right: 0; /* Remove the gap between the icon and text */
+    }
+  
+    .sidebar ul li a span {
+      display: none; /* Hide the text on smaller screens */
+    }
+  }
+  
+  /* Toggling the sidebar */
+  .sidebar-toggle {
+    display: none;
+  }
+  
+  /* Toggle button for mobile devices */
+  @media (max-width: 768px) {
+    .sidebar-toggle {
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+  
+  .dashboard-admin {
+    display: flex;
+    min-height :80vh;
+    margin-top: 1px;
+
+  }

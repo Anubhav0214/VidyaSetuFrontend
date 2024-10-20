@@ -1,0 +1,90 @@
+/* header.css */
+
+@font-face {  
+    font-family: "Samarkan";  
+    src: url("../../assets/fonts/SAMAN___.TTF") format("truetype");  
+}
+
+.custom-font {  
+    font-family: "Samarkan", sans-serif;  
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1a1a1a; /* Dark background for better contrast */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 48px; /* Increased size */
+    font-weight: bold;
+    font-family: 'Samarkan', sans-serif;
+    color: #fff; /* Default color is white */
+    position: relative;
+    padding: 10px 20px;
+    border: none; /* Removed border to avoid the dots */
+    transition: all 0.5s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    color: #fff; /* Keeps color white on hover */
+}
+
+.link {
+    display: flex;
+    gap: 25px;
+}
+
+.link a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+.link a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #00ccff;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+.link a:hover::after {
+    width: 100%; /* Underline on hover */
+}
+
+.link a:hover {
+    color: #007BFF;
+    background-color: rgba(255, 255, 255, 0.1); /* Hover background effect */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .link {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+    .link a {
+        width: 100%;
+        text-align: left;
+    }
+}

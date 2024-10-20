@@ -1,0 +1,166 @@
+/* adminCourses.css */
+
+/* Background Video */
+.adminDash-background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Admin Courses Layout */
+.admin-courses {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    z-index: 2;
+    height: 100vh;
+}
+
+.left {
+    width: 60%;
+    padding-right: 20px;
+    z-index: 2;
+}
+
+.right {
+    width: 35%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.course-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.course-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.course-form input, .course-form select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.course-form input[type="file"] {
+    padding: 0;
+}
+
+.course-form img {
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.comm-btn {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comm-btn:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+.comm-btn:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.dashboard-content p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .admin-courses {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .left, .right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .course-form img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-courses {
+        padding: 15px;
+    }
+
+    h1, h2 {
+        font-size: 24px;
+    }
+
+    .course-form input, .course-form select {
+        font-size: 12px;
+    }
+
+    .comm-btn {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .course-form img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-courses {
+        padding: 10px;
+    }
+
+    h1, h2 {
+        font-size: 20px;
+    }
+
+    .course-form input, .course-form select {
+        font-size: 10px;
+    }
+
+    .comm-btn {
+        padding: 6px;
+        font-size: 12px;
+    }
+}

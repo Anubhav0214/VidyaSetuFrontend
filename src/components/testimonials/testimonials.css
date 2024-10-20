@@ -1,0 +1,78 @@
+/* Container for the testimonials section */
+.testimonials {
+    padding: 50px 0; /* Adds space above and below the section */
+    background: linear-gradient(to bottom, #022445, #0b0b0b); /* Blue to black gradient */
+    text-align: center;
+    margin-top: -16px; /* Removes the gap between home and testimonials */
+  }
+  
+  .testimonials h2 {
+    font-size: 28px;
+    color: #fff; /* White heading text */
+    margin-bottom: 30px;
+  }
+  
+  /* Container for testimonial cards */
+  .testimonials-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Individual testimonial card */
+  .testimonial-card {
+    background-color: rgb(160, 247, 188);
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  }
+  
+  /* Hover effect for testimonial card */
+  .testimonial-card:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Student image styling */
+  .student-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Small shadow for image */
+  }
+  
+  /* Testimonial message styling */
+  .message {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  
+  /* Student info (name and position) styling */
+  .info .name {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .info .position {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media (max-width: 768px) {
+    .testimonials-cards {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+  

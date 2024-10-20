@@ -1,0 +1,96 @@
+/* dashbord.css */
+
+.student-dashboard {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dashbord-background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.5);
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    z-index: 1;
+    text-align: center;
+  }
+  
+  .dashboard-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+  }
+  
+  .dashboard-content p {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  
+  /* Styling for course cards */
+  .course-card {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease;
+    
+  }
+  
+  .course-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Responsive Design */
+  
+  /* For tablets and larger mobile devices (768px and below) */
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 2rem;
+    }
+  
+    .dashboard-content {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      padding: 10px;
+    }
+  
+    .dashboard-content p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* For small mobile devices (480px and below) */
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 1.8rem;
+    }
+  
+    .dashboard-content {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  
+    .dashboard-content p {
+      font-size: 1rem;
+    }
+  }
+  

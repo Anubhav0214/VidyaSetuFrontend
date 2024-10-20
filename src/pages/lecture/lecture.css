@@ -1,0 +1,217 @@
+/* Background Video */
+.Lecture-background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Layout for lecture page */
+.lecturee-page {
+display: flex;
+gap: 20px;
+padding: 20px;
+min-height: 100vh;
+background-color: rgba(245, 245, 245, 0.15); /* Slightly transparent background to show video */
+flex-wrap: wrap;
+z-index: 1; /* Ensure it is above the video */
+}
+
+/* leftt section for video and lecture content */
+.leftt {
+flex: 3;
+background-color: rgba(172, 169, 169, 0.30); /* Transparent background for content visibility */
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Lecture title and description */
+.leftt h1 {
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.leftt h3 {
+font-size: 18px;
+color: #666;
+}
+
+/* rightt section for the lecture list and admin options */
+.rightt {
+flex: 1;
+background-color: rgba(91, 90, 90, 0.40); /* Transparent background for content visibility */
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+/* Lecture item in the list */
+.lecture-number {
+cursor: pointer;
+padding: 10px;
+background-color: #ececec;
+border-radius: 4px;
+margin-bottom: 10px;
+font-size: 16px;
+font-weight: 500;
+transition: background-color 0.3s ease;
+}
+
+/* Active lecture highlighting */
+.lecture-number.active {
+background-color: #007bff;
+color: #fff;
+}
+
+/* Hover effect for lecture items */
+.lecture-number:hover {
+background-color: #007bff;
+color: white;
+}
+
+/* Button for adding a new lecture */
+.Add-btn {
+padding: 10px;
+background-color: #007bff;
+color: white;
+border: none;
+border-radius: 40px;
+cursor: pointer;
+font-weight: bold;
+transition: background-color 0.3s ease;
+margin-bottom: 20px;
+}
+
+/* Delete button with a smaller length and increased breadth */
+.Del-btn{
+padding: 15px 10px; /* Increased padding for more breadth */
+background-color: #f12929;
+color: white;
+border: none;
+border-radius: 40px;
+cursor: pointer;
+font-size: 10px;
+font-weight: bold;
+margin-top: 10px;
+width: 60%; /* Reduced the width to make the button smaller in length */
+}
+
+/* Add lecture form styling */
+.lecture-form {
+background-color: #ececec;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+margin-top: 20px;
+}
+
+.lecture-form h2 {
+font-size: 20px;
+margin-bottom: 20px;
+}
+
+.lecture-form label {
+font-size: 14px;
+display: block;
+margin-bottom: 8px;
+font-weight: bold;
+}
+
+.lecture-form input[type="text"],
+.lecture-form input[type="file"] {
+width: 100%;
+padding: 10px;
+margin-bottom: 20px;
+border-radius: 4px;
+border: 1px solid #ccc;
+}
+
+.lecture-form button {
+width: 100%;
+padding: 10px;
+background-color: #28a745;
+color: white;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-weight: bold;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Smaller screen devices (tablets and below) */
+@media screen and (max-width: 768px) {
+/* Stack the leftt and rightt sections vertically */
+.lecture-page {
+  flex-direction: column;
+}
+
+/* Make the leftt section full width */
+.leftt {
+  flex: 1;
+}
+
+/* Make the rightt section full width */
+.rightt {
+  flex: 1;
+  margin-top: 20px;
+}
+
+/* Adjust the size of text for better readability on small screens */
+.leftt h1 {
+  font-size: 22px;
+}
+
+.leftt h3 {
+  font-size: 16px;
+}
+
+/* Adjust the lecture list font size */
+.lecture-number {
+  font-size: 14px;
+}
+
+/* Adjust the form font size and spacing */
+.lecture-form label,
+.lecture-form input[type="text"],
+.lecture-form input[type="file"],
+.lecture-form button {
+  font-size: 14px;
+  padding: 8px;
+}
+}
+
+/* Extra small devices (mobile phones) */
+@media screen and (max-width: 480px) {
+/* Reduce text sizes further for small screens */
+.leftt h1 {
+  font-size: 20px;
+}
+
+.leftt h3 {
+  font-size: 14px;
+}
+
+/* Smaller lecture list text size */
+.lecture-number {
+  font-size: 12px;
+  padding: 8px;
+}
+
+/* Form input and button adjustments for very small screens */
+.lecture-form label,
+.lecture-form input[type="text"],
+.lecture-form input[type="file"],
+.lecture-form button {
+  font-size: 12px;
+  padding: 6px;
+}
+}
